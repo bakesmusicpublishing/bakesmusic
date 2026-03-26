@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import EmailCapture from "./components/EmailCapture";
 
 export const metadata: Metadata = {
   title: "Bakes | Official Site | Lyrical Hip-Hop Artist San Diego",
@@ -92,6 +93,18 @@ export default function RootLayout({
             gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}', { page_path: window.location.pathname });
           ` }} />
         </>)}
+        {/* Meta (Facebook) Pixel */}
+        {process.env.NEXT_PUBLIC_META_PIXEL_ID && (
+          <script>
+            {`!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n, arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+            document,'script','https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '${process.env.NEXT_PUBLIC_META_PIXEL_ID}');
+            fbq('track', 'PageView');`}
+          </script>
+        )}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -124,6 +137,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <EmailCapture />
       </body>
     </html>
   );

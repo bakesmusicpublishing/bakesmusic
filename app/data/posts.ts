@@ -10,6 +10,26 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    title: "How to Get Your Music on Spotify Playlists in 2026",
+    slug: "spotify-playlists-2026",
+    date: "2026-03-26",
+    excerpt:
+      "The complete strategy for landing on both editorial and independent playlists. Pitching tactics, metadata optimization, and relationship building for 2026 streams.",
+    category: "Music Career",
+    content: `Read the full article on bakesmusic.com`,
+    image: "/images/blog/spotify-playlists-2026.jpg",
+  },
+  {
+    title: "Behind the Scenes: Divine Timing Album Creation",
+    slug: "divine-timing-behind-scenes",
+    date: "2026-03-26",
+    excerpt:
+      "A deep dive into the making of Divine Timing — from the first seed of the idea to final mix, cover art, and the moments that almost didn't make the cut.",
+    category: "Divine Timing",
+    content: `Read the full article on bakesmusic.com`,
+    image: "/images/blog/divine-timing-bts.jpg",
+  },
+  {
     title: "5 Things Nobody Tells You About Going Independent",
     slug: "5-things-going-independent",
     date: "2026-03-25",
