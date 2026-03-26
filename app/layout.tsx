@@ -74,16 +74,14 @@ export default function RootLayout({
 
 
 
-        {/* Google Ads */}
-        {process.env.NEXT_PUBLIC_GOOGLE_ADS_ID && (<>
-          <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ADS_ID}`} />
-          <script dangerouslySetInnerHTML={{ __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ADS_ID}');
-          ` }} />
-        </>)}
+        {/* Google AdSense — activates when NEXT_PUBLIC_ADSENSE_PUBLISHER_ID is set (e.g. ca-pub-XXXXXXXXXX) */}
+        {process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID && (
+          <script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID}`}
+            crossOrigin="anonymous"
+          />
+        )}
         {/* Google Analytics — activates when GA_MEASUREMENT_ID env var is set */}
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (<>
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`} />

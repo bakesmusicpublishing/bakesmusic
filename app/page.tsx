@@ -12,12 +12,12 @@ export const metadata: Metadata = {
 };
 
 const pressLogos = [
-  { name: "VEVO", detail: "#3 Incoming Hip-Hop" },
-  { name: "GQ", detail: "10 Songs to Sweat To" },
-  { name: "The Source", detail: "Featured Artist" },
-  { name: "HipHopWeekly", detail: "Featured" },
-  { name: "Thisis50", detail: "New Artist" },
-  { name: "Lord Sear", detail: "New Artist Spotlight" },
+  { name: "VEVO", detail: "#3 Incoming Hip-Hop", url: "https://www.vevo.com" },
+  { name: "GQ", detail: "10 Songs to Sweat To", url: "https://www.gq.com" },
+  { name: "The Source", detail: "Featured Artist", url: "https://thesource.com/2022/06/28/bakes-from-lyrical-poet-to-versatile-rapper/" },
+  { name: "HipHopWeekly", detail: "Featured", url: null },
+  { name: "Thisis50", detail: "New Artist", url: "https://web.archive.org/web/20240615231405/https://thisis50.com/2022/02/04/bakes-releases-official-video-for-single-my-opinion/" },
+  { name: "Lord Sear", detail: "New Artist Spotlight", url: null },
 ];
 
 export default function HomePage() {
@@ -161,17 +161,16 @@ export default function HomePage() {
             }}
           >
             {pressLogos.map((p) => (
-              <span
-                key={p.name}
-                style={{
-                  fontFamily: "'Bebas Neue', sans-serif",
-                  fontSize: "0.8rem",
-                  letterSpacing: "0.15em",
-                  color: "#888",
-                }}
-              >
-                {p.name}
-              </span>
+              p.url ? (
+                <a key={p.name} href={p.url} target="_blank" rel="noopener noreferrer"
+                  style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.8rem", letterSpacing: "0.15em", color: "#888", textDecoration: "none" }}>
+                  {p.name}
+                </a>
+              ) : (
+                <span key={p.name} style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.8rem", letterSpacing: "0.15em", color: "#888" }}>
+                  {p.name}
+                </span>
+              )
             ))}
           </div>
         </div>
@@ -229,32 +228,21 @@ export default function HomePage() {
             alignItems: "center",
           }}
         >
-          {pressLogos.map((p) => (
-            <div key={p.name} style={{ textAlign: "center" }}>
-              <p
-                style={{
-                  fontFamily: "'Bebas Neue', sans-serif",
-                  fontSize: "1.1rem",
-                  letterSpacing: "0.15em",
-                  color: "#FFD700",
-                  lineHeight: 1,
-                  marginBottom: "0.2rem",
-                }}
-              >
-                {p.name}
-              </p>
-              <p
-                style={{
-                  fontFamily: "Inter, sans-serif",
-                  fontSize: "0.65rem",
-                  color: "#555",
-                  letterSpacing: "0.05em",
-                }}
-              >
-                {p.detail}
-              </p>
-            </div>
-          ))}
+          {pressLogos.map((p) => {
+            const inner = (
+              <div key={p.name} style={{ textAlign: "center" }}>
+                <p style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "1.1rem", letterSpacing: "0.15em", color: "#FFD700", lineHeight: 1, marginBottom: "0.2rem" }}>
+                  {p.name}
+                </p>
+                <p style={{ fontFamily: "Inter, sans-serif", fontSize: "0.65rem", color: "#555", letterSpacing: "0.05em" }}>
+                  {p.detail}
+                </p>
+              </div>
+            );
+            return p.url ? (
+              <a key={p.name} href={p.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>{inner}</a>
+            ) : inner;
+          })}
         </div>
       </section>
 

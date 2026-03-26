@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { posts, getPostBySlug, getRelatedPosts } from "../../data/posts";
 import BlogCard from "../../components/BlogCard";
+import AdSlot from "../../components/AdSlot";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -241,46 +242,71 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Cover image placeholder */}
-      <div
-        style={{
-          maxWidth: "820px",
-          margin: "0 auto",
-          padding: "0 1.5rem",
-        }}
-      >
-        <div
-          style={{
-            width: "100%",
-            height: "400px",
-            backgroundColor: "#111111",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            marginTop: "3rem",
-            position: "relative",
-            overflow: "hidden",
-          }}
-        >
-          <div
-            style={{
-              fontFamily: "'Bebas Neue', sans-serif",
-              fontSize: "4rem",
-              color: "#1a1a1a",
-              letterSpacing: "0.3em",
-            }}
-          >
-            BAKES
-          </div>
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              background: `linear-gradient(135deg, rgba(10,10,10,0.8), rgba(10,10,10,0.4))`,
-            }}
-          />
+      {/* Cover image */}
+      <div style={{ maxWidth: "820px", margin: "0 auto", padding: "0 1.5rem" }}>
+        <div style={{ width: "100%", aspectRatio: "16/7", marginTop: "3rem", position: "relative", overflow: "hidden", backgroundColor: "#111" }}>
+          {post.image ? (
+            <img
+              src={post.image}
+              alt={`${post.title} — Bakes hip-hop blog`}
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+            />
+          ) : (
+            <>
+              <img
+                src="/images/gallery/bakes-professional-photoshoot-lyrical-hiphop-artist-001.jpg"
+                alt={`${post.title} — Bakes hip-hop blog`}
+                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", opacity: 0.4 }}
+              />
+              <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <p style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(1.5rem, 4vw, 3rem)", color: "#FFD700", letterSpacing: "0.2em", textAlign: "center", padding: "1rem", textShadow: "0 2px 20px rgba(0,0,0,0.8)" }}>
+                  {post.category.toUpperCase()}
+                </p>
+              </div>
+            </>
+          )}
+          <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "50%", background: "linear-gradient(180deg, transparent, rgba(8,11,16,0.9))" }} />
         </div>
       </div>
+
+      {/* Article JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": post.title,
+          "description": post.excerpt,
+          "image": post.image || "https://bakesmusic.com/images/og-image.jpg",
+          "url": `https://bakesmusic.com/blog/${post.slug}`,
+          "datePublished": post.date,
+          "dateModified": post.date,
+          "author": {
+            "@type": "Person",
+            "name": "Bakes",
+            "url": "https://bakesmusic.com/about",
+            "sameAs": [
+              "https://open.spotify.com/artist/4syNtiG715ZmiLemlyR8Sm",
+              "https://instagram.com/bakes.music.official"
+            ]
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Bakes Music",
+            "url": "https://bakesmusic.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://bakesmusic.com/images/og-image.jpg"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": `https://bakesmusic.com/blog/${post.slug}`
+          },
+          "articleSection": post.category,
+          "keywords": [post.category, "Bakes", "hip-hop", "San Diego rap", "lyrical hip-hop", "independent music"].join(", ")
+        }) }}
+      />
 
       {/* Article Body */}
       <article
@@ -290,7 +316,13 @@ export default async function BlogPostPage({ params }: Props) {
           padding: "3rem 1.5rem 5rem",
         }}
       >
+        {/* AdSense — above article (activates when publisher ID is set) */}
+        <AdSlot slot="REPLACE_WITH_AD_UNIT_ID_1" format="horizontal" style={{ marginBottom: "2rem" }} />
+
         {renderContent(post.content)}
+
+        {/* AdSense — mid article */}
+        <AdSlot slot="REPLACE_WITH_AD_UNIT_ID_2" format="rectangle" style={{ margin: "2rem 0" }} />
 
         {/* Author bio */}
         <div
