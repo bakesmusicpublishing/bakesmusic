@@ -251,6 +251,17 @@ export default function BlogPage() {
         </div>
       </section>
 
+      {/* In-feed Ad */}
+      <div style={{ margin: "2rem auto", padding: "0 1rem", maxWidth: "800px" }}>
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-format="fluid"
+          data-ad-layout-key="+20+rg+1y-2u+1l"
+          data-ad-client="ca-pub-8745120722611220"
+          data-ad-slot="2299562218"
+        />
+      </div>
       <EmailSignup
         title="NEVER MISS A POST"
         subtitle="New articles on music, personal growth, and the divine timing philosophy — to your inbox."
