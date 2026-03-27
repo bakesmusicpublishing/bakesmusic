@@ -3,6 +3,7 @@ import Link from "next/link";
 import HeroSection from "../components/HeroSection";
 import BlogCard from "../components/BlogCard";
 import EmailSignup from "../components/EmailSignup";
+import AdSlot from "../components/AdSlot";
 import { posts } from "../data/posts";
 
 export const metadata: Metadata = {
@@ -252,16 +253,7 @@ export default function BlogPage() {
       </section>
 
       {/* In-feed Ad */}
-      <div style={{ margin: "2rem auto", padding: "0 1rem", maxWidth: "800px" }}>
-        <ins
-          className="adsbygoogle"
-          style={{ display: "block" }}
-          data-ad-format="fluid"
-          data-ad-layout-key="+20+rg+1y-2u+1l"
-          data-ad-client="ca-pub-8745120722611220"
-          data-ad-slot="2299562218"
-        />
-      </div>
+      <AdSlot slot="2299562218" format="fluid" style={{ margin: "2rem auto", padding: "0 1rem", maxWidth: "800px" }} />
       <EmailSignup
         title="NEVER MISS A POST"
         subtitle="New articles on music, personal growth, and the divine timing philosophy — to your inbox."
