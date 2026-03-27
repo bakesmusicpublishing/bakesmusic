@@ -31,7 +31,7 @@ export default function HomePage() {
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8745120722611220"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         ></script>
         <ins
           className="adsbygoogle"
