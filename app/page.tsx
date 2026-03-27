@@ -51,7 +51,6 @@ export default function HomePage() {
 
       {/* HERO */}
       <section
-      <section
         style={{
           position: "relative",
           minHeight: "100vh",
