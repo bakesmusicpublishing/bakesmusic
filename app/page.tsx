@@ -28,6 +28,11 @@ export default function HomePage() {
     <>
       {/* Hero Banner Ad */}
       <div style={{ width: '100%', maxWidth: '1200px', margin: '0 auto 1.5rem' }}>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8745120722611220"
+          crossorigin="anonymous"
+        ></script>
         <ins
           className="adsbygoogle"
           style={{
