@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 interface AdSlotProps {
   slot: string; // AdSense ad unit slot ID
-  format?: "auto" | "rectangle" | "horizontal" | "vertical";
+  format?: "auto" | "rectangle" | "horizontal" | "vertical" | "fluid";
   style?: React.CSSProperties;
 }
 
