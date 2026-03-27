@@ -147,6 +147,21 @@ export default function Footer() {
                 </a>
               ))}
             </div>
+
+            {/* Google AdSense Footer Ad */}
+            <ins
+              className="adsbygoogle"
+              style={{
+                display: "block",
+                margin: "0 auto",
+                minWidth: "336px",
+                width: "100%",
+              }}
+              data-ad-client="ca-pub-8745120722611220"
+              data-ad-slot="7098661006"
+              data-ad-format="auto"
+              data-full-width-responsive="true"
+            ></ins>
           </div>
 
           {/* Nav Links */}
