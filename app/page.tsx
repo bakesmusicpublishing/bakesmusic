@@ -1,25 +1,3 @@
-{/* Hero Banner Ad */}
-<div style={{ width: '100%', maxWidth: '1200px', margin: '0 auto 1.5rem' }}>
-  <script
-    async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8745120722611220"
-    crossorigin="anonymous"
-  ></script>
-  <ins
-    className="adsbygoogle"
-    style={{
-      display: 'block',
-      margin: '0 auto',
-      minWidth: '600px',
-      width: '100%',
-    }}
-    data-ad-client="ca-pub-8745120722611220"
-    data-ad-slot="8349264543"
-    data-ad-format="auto"
-    data-full-width-responsive="true"
-  ></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
 import type { Metadata } from "next";
 import Link from "next/link";
 import EmailSignup from "./components/EmailSignup";
@@ -48,7 +26,26 @@ export default function HomePage() {
 
   return (
     <>
+      {/* Hero Banner Ad */}
+      <div style={{ width: '100%', maxWidth: '1200px', margin: '0 auto 1.5rem' }}>
+        <ins
+          className="adsbygoogle"
+          style={{
+            display: 'block',
+            margin: '0 auto',
+            minWidth: '600px',
+            width: '100%',
+          }}
+          data-ad-client="ca-pub-8745120722611220"
+          data-ad-slot="8349264543"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        ></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
       {/* HERO */}
+      <section
       <section
         style={{
           position: "relative",

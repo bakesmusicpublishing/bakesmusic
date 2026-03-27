@@ -10,7 +10,6 @@
       <BlogCard key={post.slug} post={post} variant="featured" />
       {/* In‑feed Ad */}
       <div style={{ margin: '2rem auto', padding: '0 1rem' }}>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8745120722611220" crossorigin="anonymous"></script>
         <ins className="adsbygoogle"
              style={{ display: 'block' }}
              data-ad-format="fluid"
