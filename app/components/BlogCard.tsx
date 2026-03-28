@@ -34,29 +34,21 @@ export default function BlogCard({ post, variant = "default" }: BlogCardProps) {
         }}
         className="card-hover"
       >
-        {/* Image placeholder */}
+        {/* Thumbnail image */}
         <div
           style={{
             width: "100%",
             height: "220px",
             backgroundColor: "#1a1a1a",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
             position: "relative",
             overflow: "hidden",
           }}
         >
-          <div
-            style={{
-              fontFamily: "'Bebas Neue', sans-serif",
-              fontSize: "1rem",
-              color: "#333",
-              letterSpacing: "0.2em",
-            }}
-          >
-            BAKES
-          </div>
+          <img
+            src={post.image || "/images/gallery/bakes-professional-photoshoot-lyrical-hiphop-artist-001.jpg"}
+            alt={post.title}
+            style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 20%", display: "block" }}
+          />
           <div
             style={{
               position: "absolute",
@@ -79,6 +71,7 @@ export default function BlogCard({ post, variant = "default" }: BlogCardProps) {
               fontSize: "0.7rem",
               letterSpacing: "0.12em",
               padding: "0.2rem 0.5rem",
+              fontWeight: 700,
             }}
           >
             {post.category}
@@ -158,6 +151,16 @@ export default function BlogCard({ post, variant = "default" }: BlogCardProps) {
         ((e.currentTarget as HTMLElement).style.backgroundColor = "#111111")
       }
     >
+      {/* Thumbnail */}
+      {post.image && (
+        <div style={{ width: "120px", minWidth: "120px", height: "80px", overflow: "hidden", borderRadius: "4px", flexShrink: 0 }}>
+          <img
+            src={post.image}
+            alt={post.title}
+            style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 20%", display: "block" }}
+          />
+        </div>
+      )}
       <div style={{ flex: 1 }}>
         <div
           style={{

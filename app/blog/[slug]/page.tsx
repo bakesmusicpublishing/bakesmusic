@@ -412,28 +412,28 @@ export default async function BlogPostPage({ params }: Props) {
 
       {/* Cover image */}
       <div style={{ maxWidth: "820px", margin: "0 auto", padding: "0 1.5rem" }}>
-        <div style={{ width: "100%", aspectRatio: "16/7", marginTop: "3rem", position: "relative", overflow: "hidden", backgroundColor: "#111" }}>
-          {post.image ? (
-            <img
-              src={post.image}
-              alt={`${post.title} — Bakes hip-hop blog`}
-              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-            />
-          ) : (
-            <>
-              <img
-                src="/images/gallery/bakes-professional-photoshoot-lyrical-hiphop-artist-001.jpg"
-                alt={`${post.title} — Bakes hip-hop blog`}
-                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", opacity: 0.4 }}
-              />
-              <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <p style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(1.5rem, 4vw, 3rem)", color: "#FFD700", letterSpacing: "0.2em", textAlign: "center", padding: "1rem", textShadow: "0 2px 20px rgba(0,0,0,0.8)" }}>
-                  {post.category.toUpperCase()}
-                </p>
-              </div>
-            </>
-          )}
-          <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "50%", background: "linear-gradient(180deg, transparent, rgba(8,11,16,0.9))" }} />
+        <div style={{ width: "100%", aspectRatio: "16/9", marginTop: "3rem", position: "relative", overflow: "hidden", backgroundColor: "#111", borderRadius: "4px" }}>
+          <img
+            src={post.image || "/images/gallery/bakes-professional-photoshoot-lyrical-hiphop-artist-001.jpg"}
+            alt={`${post.title} — Bakes hip-hop blog`}
+            style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 20%", display: "block" }}
+          />
+          {/* Dark gradient overlay */}
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,11,16,0.2) 0%, rgba(8,11,16,0.4) 50%, rgba(8,11,16,0.85) 100%)" }} />
+          {/* Category badge on image */}
+          <div style={{ position: "absolute", top: "1.5rem", left: "1.5rem" }}>
+            <span style={{
+              backgroundColor: catColor,
+              color: "#0a0a0a",
+              fontFamily: "'Bebas Neue', sans-serif",
+              fontSize: "0.75rem",
+              letterSpacing: "0.12em",
+              padding: "0.3rem 0.75rem",
+              fontWeight: 700,
+            }}>
+              {post.category.toUpperCase()}
+            </span>
+          </div>
         </div>
       </div>
 
