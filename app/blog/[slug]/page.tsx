@@ -316,13 +316,13 @@ export default async function BlogPostPage({ params }: Props) {
           padding: "3rem 1.5rem 5rem",
         }}
       >
-        {/* AdSense — above article (activates when publisher ID is set) */}
-        <AdSlot slot="REPLACE_WITH_AD_UNIT_ID_1" format="horizontal" style={{ marginBottom: "2rem" }} />
+        {/* AdSense — above article */}
+        <AdSlot slot="8349264543" format="auto" style={{ marginBottom: "2rem" }} />
 
         {renderContent(post.content)}
 
         {/* AdSense — mid article */}
-        <AdSlot slot="REPLACE_WITH_AD_UNIT_ID_2" format="rectangle" style={{ margin: "2rem 0" }} />
+        <AdSlot slot="2299562218" format="auto" style={{ margin: "2rem 0" }} />
 
         {/* Author bio */}
         <div

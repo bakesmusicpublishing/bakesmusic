@@ -191,7 +191,6 @@ Inscrivez-vous à ma newsletter pour recevoir :
 *Cet article fait partie d'une série sur la construction d'une carrière hip-hop durable. Prochain article : "Comment Optimiser Votre Profil YouTube pour les Recherches Internationales".`,
     image: "/images/blog/hip-hop-career-french.jpg",
   },
-];
   {
     title: "How to Get Your Music on Spotify Playlists in 2026",
     slug: "spotify-playlists-2026",
