@@ -60,15 +60,69 @@ export default async function BlogPostPage({ params }: Props) {
   const related = getRelatedPosts(post.slug, post.category, 3);
   const catColor = categoryColors[post.category] || "#FFD700";
 
-  // Convert markdown-like content to paragraphs
+  // Convert markdown-like content to rich HTML
   const renderContent = (content: string) => {
     const lines = content.split("\n");
     const elements: React.ReactNode[] = [];
     let i = 0;
 
+    // Process inline markdown (bold, italic, links)
+    const processInline = (text: string): string => {
+      return text
+        .replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g, '<a href="$2" style="color:#FFD700;text-decoration:underline;text-underline-offset:3px" target="_blank" rel="noopener">$1</a>')
+        .replace(/\[([^\]]+)\]\(\/([^)]+)\)/g, '<a href="/$2" style="color:#FFD700;text-decoration:underline;text-underline-offset:3px">$1</a>')
+        .replace(/\*\*([^*]+)\*\*/g, "<strong style='color:#ffffff'>$1</strong>")
+        .replace(/\*([^*]+)\*/g, "<em>$1</em>");
+    };
+
     while (i < lines.length) {
       const line = lines[i];
 
+      // YouTube embed detection
+      if (line.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]+)/)) {
+        const videoId = line.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]+)/)?.[1];
+        if (videoId) {
+          elements.push(
+            <div key={i} style={{ margin: "2rem 0", position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden", borderRadius: "4px", border: "1px solid rgba(255,215,0,0.2)" }}>
+              <iframe
+                src={`https://www.youtube.com/embed/${videoId}`}
+                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: "none" }}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                title="YouTube video"
+              />
+            </div>
+          );
+          i++;
+          continue;
+        }
+      }
+
+      // Watch link with YouTube URL - render as embedded video
+      if (line.match(/\[.*?\]\(https?:\/\/(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]+)\)/)) {
+        const match = line.match(/\[([^\]]*)\]\(https?:\/\/(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]+)\)/);
+        if (match) {
+          const [, linkText, videoId] = match;
+          elements.push(
+            <div key={`yt-${i}`} style={{ margin: "2rem 0" }}>
+              <p style={{ color: "#FFD700", fontFamily: "Inter, sans-serif", fontSize: "0.9rem", marginBottom: "0.75rem", letterSpacing: "0.02em" }}>▶ {linkText}</p>
+              <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden", borderRadius: "4px", border: "1px solid rgba(255,215,0,0.2)" }}>
+                <iframe
+                  src={`https://www.youtube.com/embed/${videoId}`}
+                  style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: "none" }}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  title={linkText}
+                />
+              </div>
+            </div>
+          );
+          i++;
+          continue;
+        }
+      }
+
+      // H2 heading
       if (line.startsWith("## ")) {
         elements.push(
           <h2
@@ -87,7 +141,123 @@ export default async function BlogPostPage({ params }: Props) {
             {line.replace("## ", "")}
           </h2>
         );
-      } else if (line.startsWith("**") && line.endsWith("**")) {
+      }
+      // H3 heading
+      else if (line.startsWith("### ")) {
+        elements.push(
+          <h3
+            key={i}
+            style={{
+              fontFamily: "'Bebas Neue', sans-serif",
+              fontSize: "clamp(1.1rem, 2vw, 1.5rem)",
+              color: "#FFD700",
+              letterSpacing: "0.04em",
+              marginTop: "2rem",
+              marginBottom: "0.75rem",
+            }}
+          >
+            {line.replace("### ", "")}
+          </h3>
+        );
+      }
+      // Blockquote
+      else if (line.startsWith("> ")) {
+        elements.push(
+          <blockquote
+            key={i}
+            style={{
+              borderLeft: `3px solid ${catColor}`,
+              paddingLeft: "1.25rem",
+              margin: "1.5rem 0",
+              color: "#cccccc",
+              fontStyle: "italic",
+              fontFamily: "Inter, sans-serif",
+              fontSize: "1.05rem",
+              lineHeight: 1.8,
+            }}
+            dangerouslySetInnerHTML={{ __html: processInline(line.replace(/^>\s*/, "")) }}
+          />
+        );
+      }
+      // Bullet list items
+      else if (line.match(/^[-•]\s/)) {
+        const listItems: string[] = [];
+        while (i < lines.length && lines[i].match(/^[-•]\s/)) {
+          listItems.push(lines[i].replace(/^[-•]\s*/, ""));
+          i++;
+        }
+        elements.push(
+          <ul key={`ul-${i}`} style={{ margin: "1rem 0 1.5rem 1.5rem", padding: 0 }}>
+            {listItems.map((item, idx) => (
+              <li
+                key={idx}
+                dangerouslySetInnerHTML={{ __html: processInline(item) }}
+                style={{
+                  color: "#AAAAAA",
+                  fontFamily: "Inter, sans-serif",
+                  fontSize: "1rem",
+                  lineHeight: 1.8,
+                  marginBottom: "0.5rem",
+                  listStyleType: "disc",
+                }}
+              />
+            ))}
+          </ul>
+        );
+        continue; // Skip i++ since we already advanced
+      }
+      // Numbered list items
+      else if (line.match(/^\d+\.\s/)) {
+        const listItems: string[] = [];
+        while (i < lines.length && lines[i].match(/^\d+\.\s/)) {
+          listItems.push(lines[i].replace(/^\d+\.\s*/, ""));
+          i++;
+        }
+        elements.push(
+          <ol key={`ol-${i}`} style={{ margin: "1rem 0 1.5rem 1.5rem", padding: 0 }}>
+            {listItems.map((item, idx) => (
+              <li
+                key={idx}
+                dangerouslySetInnerHTML={{ __html: processInline(item) }}
+                style={{
+                  color: "#AAAAAA",
+                  fontFamily: "Inter, sans-serif",
+                  fontSize: "1rem",
+                  lineHeight: 1.8,
+                  marginBottom: "0.5rem",
+                }}
+              />
+            ))}
+          </ol>
+        );
+        continue;
+      }
+      // Image in content
+      else if (line.match(/^!\[.*?\]\(.*?\)/)) {
+        const imgMatch = line.match(/^!\[([^\]]*)\]\(([^)]+)\)/);
+        if (imgMatch) {
+          elements.push(
+            <div key={i} style={{ margin: "2rem 0", textAlign: "center" }}>
+              <img
+                src={imgMatch[2]}
+                alt={imgMatch[1]}
+                style={{ maxWidth: "100%", borderRadius: "4px", border: "1px solid rgba(255,255,255,0.1)" }}
+              />
+              {imgMatch[1] && (
+                <p style={{ color: "#666", fontSize: "0.85rem", marginTop: "0.5rem", fontStyle: "italic" }}>{imgMatch[1]}</p>
+              )}
+            </div>
+          );
+        }
+      }
+      // Horizontal rule
+      else if (line.match(/^---+$/)) {
+        elements.push(
+          <hr key={i} style={{ border: "none", borderTop: "1px solid rgba(255,255,255,0.1)", margin: "2rem 0" }} />
+        );
+      }
+      // Bold-only lines (subheadings)
+      else if (line.startsWith("**") && line.endsWith("**")) {
         elements.push(
           <p
             key={i}
@@ -95,24 +265,22 @@ export default async function BlogPostPage({ params }: Props) {
               color: "#ffffff",
               fontFamily: "Inter, sans-serif",
               fontWeight: 600,
-              fontSize: "1rem",
+              fontSize: "1.05rem",
               lineHeight: 1.8,
               marginBottom: "0.5rem",
+              marginTop: "1.5rem",
             }}
           >
             {line.replace(/\*\*/g, "")}
           </p>
         );
-      } else if (line.trim() !== "") {
-        // Handle inline bold and italic
-        const processedLine = line
-          .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
-          .replace(/\*([^*]+)\*/g, "<em>$1</em>");
-
+      }
+      // Regular paragraph
+      else if (line.trim() !== "") {
         elements.push(
           <p
             key={i}
-            dangerouslySetInnerHTML={{ __html: processedLine }}
+            dangerouslySetInnerHTML={{ __html: processInline(line) }}
             style={{
               color: "#AAAAAA",
               fontFamily: "Inter, sans-serif",
