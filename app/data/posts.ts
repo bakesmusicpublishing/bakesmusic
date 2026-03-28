@@ -10,6 +10,189 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    title: "Comment Réussir Sa Carrière Hip-Hop: Leçons d'un Artiste en Croissance",
+    slug: "comment-reussir-carriere-hip-hop",
+    date: "2026-03-27",
+    excerpt:
+      "Guide complet pour les artistes hip-hop francophones : trouvez votre son authentique, construisez une communauté, maîtrisez le SEO, et diversifiez vos revenus. Leçons d'un artiste en croissance.",
+    category: "Music Career",
+    content: `Il y a un moment — vous l'avez probablement ressenti — où une chanson arrive et quelque chose dans votre poitrine se déplace. Vous ne parlez même pas la même langue. Peut-être êtes-vous dans un taxi à Lagos, ou dans un café à Lyon, ou dans un bus à São Paulo. Le beat tombe, les mots frappent un rythme que vous reconnaissez dans vos os, et soudain vous comprenez tout ce que l'artiste dit sans comprendre un seul mot. C'est le hip-hop. C'est le langage universel de l'expérience humaine.
+
+En tant qu'artiste hip-hop lyrique basé à San Diego, j'ai vu ma musique se connecter avec des auditeurs à travers les continents — des gens qui n'ont jamais vu la skyline de la Bay Area, jamais parcouru la 5 à travers South San Diego, jamais vécu mon histoire exacte. Mais ils la *ressentent*. Parce que l'histoire est la leur aussi.
+
+## Ce Qui Rend le Hip-Hop Différent de Tous les Autres Genres
+
+Chaque genre transporte de l'émotion. Le country raconte des histoires de cœur brisé et de chez-soi. Le classique transmet grandeur et chagrin. La pop poursuit le sentiment du moment. Mais le hip-hop fait quelque chose qu'aucun des autres ne fait de la même façon : il nomme les choses avec précision.
+
+Les artistes hip-hop sont d'abord des palabrasmiths. Nous excavons la langue anglaise — et de plus en plus, des dizaines d'autres langues — pour trouver la manière la plus spécifique, la plus résonnante de dire ce qui est vrai. Quand Kendrick rappe sur Compton, il ne parle pas seulement de Compton. Il parle de chaque quartier qui a été ignoré. Quand Racionais MC's rappe en portugais sur São Paulo, ils parlent de chaque ville où les marges ont été négligées. Quand les rappeurs français crachent sur les banlieues, ils parlent de partout où une génération a été dit qu'elle n'appartient pas.
+
+Le hip-hop nomme l'innommable. C'est pourquoi il voyage.
+
+## Le Rythme Existe Déjà dans Toute Culture
+
+Voici quelque chose que les gens ne reconnaissent pas toujours : le fondement rythmique du hip-hop n'est pas étranger à aucune culture. C'est la percussion. C'est l'appel-réponse. C'est la tradition orale. Ce sont parmi les plus anciennes formes de communication humaine sur terre.
+
+Avant l'écriture, les êtres humains stockaient leur histoire dans le rythme et le vers. Les griots en Afrique de l'Ouest. Les bardes en Europe médiévale. Les poètes de spoken word en Inde ancienne. Le hip-hop est le plus récent vaisseau pour l'un des plus vieux instincts de l'humanité — le besoin de dire votre vérité à haute voix, en rythme, devant un public qui a besoin de l'entendre.
+
+Quand le hip-hop a atterri en France dans les années 1980, il n'a pas semblé étranger aux jeunes qui l'ont adopté — il a semblé être quelque chose qu'ils connaissaient déjà. Même au Nigeria, au Brésil, en Allemagne, au Royaume-Uni. Chaque culture a sa propre relation avec le rythme et le témoignage. Le hip-hop a simplement donné à cet ancien instinct une nouvelle forme.
+
+## Le Hip-Hop Lyrique Parle à l'Individu à l'Intérieur de l'Universal
+
+Ce qui sépare le hip-hop lyrique du rap commercial, ce n'est pas la valeur de production ou le budget d'album — c'est la spécificité de la vérité qui est dite. Les artistes lyriques vont profondément. Ils ne décrivent pas seulement la surface d'une expérience ; ils l'excavent.
+
+C'est ce que j'essaie de faire avec ma musique. Quand j'écris sur le timing divin, sur la construction de votre propre monde, sur le suivi des rêves quand le chemin n'est pas clair — j'écris depuis ma vie spécifique. Racines Bay Area. Rues de San Diego. Décisions réelles, doutes réels, percées réelles. Et pourtant, chaque fois qu'un auditeur de France ou du Nigeria ou du Brésil me contacte pour dire qu'une chanson a semblé écrite pour lui, je suis rappelé : le spécifique *est* l'universel.
+
+Plus vous êtes honnête sur votre propre expérience, plus d'autres gens se reconnaissent en elle. C'est le paradoxe au cœur du grand hip-hop lyrique.
+
+## Comment le Hip-Hop Est Devenu le Genre le Plus Streamé au Monde
+
+Ce n'est pas un accident que le hip-hop est maintenant le genre le plus streamé au monde. Les données Spotify montrent constamment que le rap et le hip-hop mènent l'écoute mondiale. Cela n'est pas arrivé parce que c'est tendance. Cela est arrivé parce qu'une génération de jeunes à travers tous les continents a reconnu quelque chose de réel en lui.
+
+Les jeunes à Lagos n'écoutent plus seulement le hip-hop américain — ils créent du rap influencé par l'Afrobeats qui prend d'assaut les playlists mondiales. Les artistes au Brésil mélangent le funk carioca avec des flows de hip-hop. Le rap français a sa propre identité si forte qu'il a commencé à influencer les artistes américains en retour. Le genre est devenu une conversation mondiale vivante et respirante.
+
+Et au centre de cette conversation se trouve la même chose qu'elle a toujours été : la vérité. L'expérience. Le désir humain d'être entendu.
+
+## Ce Que le Hip-Hop M'a Appris sur la Connexion à Travers la Distance
+
+Construire ma musique depuis San Diego, j'ai dû réfléchir sérieusement à comment atteindre des auditeurs qui n'ont jamais été ici, n'ont jamais marché dans les rues qui ont façonné mon son. La réponse à laquelle je reviens toujours : ne cherchez pas à effacer les spécificités. Penchez-vous dessus.
+
+San Diego a une énergie particulière — chaleur West Coast, lumière Pacifique, une ville toujours légèrement sous-estimée. Les racines Bay Area ajoutent une autre couche : faim, communauté, culture. Ces spécificités ne sont pas des barrières à la connexion. Ce sont les points d'entrée. Les gens veulent savoir d'où vous venez. Ils veulent sentir un lieu à travers votre musique.
+
+L'universel est atteint à travers le local. Toujours.
+
+## 1. Trouvez Votre Son Authentique
+
+**Ne copiez pas — innovez.**
+
+Le hip-hop évolue constamment. Des sonorités de drill française aux rythmes afrobeats, le paysage musical mondial est riche et diversifié. Mais votre pouvoir réside dans votre authenticité.
+
+- **Explorez vos influences** : Quels artistes vous ont façonné ? Mélangez ces inspirations avec votre vécu.
+- **Expérimentez en studio** : Enregistrez, réenregistrez, ajustez. Votre son unique émergera à travers l'itération.
+- **Restez vrai dans les paroles** : Le hip-hop est littéraire. Vos lyrics doivent raconter votre histoire, pas celle de quelqu'un d'autre.
+
+*Ma pratique* : J'écris chaque jour, même quand je ne suis pas en studio. Les meilleurs vers viennent souvent dans les moments les plus inattendus.
+
+## 2. Bâtir une Communauté, Pas Juste un Public
+
+Un véritable fan ne stream pas seulement votre musique — il croit en votre message.
+
+**Stratégies communautaires :**
+- **Interagissez sur les réseaux** : Répondez aux commentaires, partagez les créations de vos fans.
+- **Créez des expériences live** : Que ce soit en concert ou en showcase, connectez-vous en personne.
+- **Valeur au-delà de la musique** : Partagez votre parcours, vos conseils, vos échecs. Les gens s'attachent à la vulnérabilité.
+
+Instagram et TikTok sont essentiels, mais ne négligez pas Telegram pour une communauté plus engagée — j'utilise @bakesmusic_bot pour partager du contenu exclusif.
+
+## 3. SEO et Visibilité en Ligne (Leçon Cruciale)
+
+Beaucoup d'artistes fabuleux restent invisibles parce qu'ils ignorent le référencement.
+
+**Pour les artistes hip-hop francophones :**
+- Optimisez votre site avec des **mots-clés en français** : "carrière hip-hop", "devenir rappeur", "conseils pour artiste urbain"
+- Créez un **blog régulièrement** (au moins 2 fois par semaine) avec du contenu qui répond aux questions de votre audience
+- Utilisez des **balises meta descriptions** précises et des **titres SEO** qui attirent les clics
+- Ajoutez des **sous-titres (h2, h3)** pour structurer le contenu
+
+*Mon expérience* : Après avoir lancé mon nouveau site bakesmusic.com et commencé à publier des articles optimisés, le trafic organique commence à grimper — lentement mais régulièrement.
+
+## 4. Diversifiez Vos Revenus (Ne Mettez Pas Tous les Œufs dans le Même Panier)
+
+Le streaming seul ne paie pas les factures. Les artistes qui réussissent créent plusieurs flux de revenus :
+
+- **Streaming** (Spotify, Apple Music, YouTube) — le socle
+- **Merchandising** — t-shirts, hoodies, accessoires (ma marque Divine Timing est née de cette idée)
+- **Performances live** — concerts, showcases, festivals
+- **Contenu exclusif** — abonnements, contenu payant
+- **Placements et syncs** — publicités, jeux vidéo, films
+
+*ASTUCE* : Votre merchandising doit refléter votre identité artistique. Divine Timing n'est pas juste un logo — c'est un message.
+
+## 5. Le Pouvoir du Timing Divin
+
+Ce concept n'est pas juste une phrase à la mode. Pour moi, Divine Timing signifie que chaque étape de votre parcours arrive exactement quand elle doit arriver.
+
+- **Ne vous précipitez pas** : Certains artistes explosent à 18 ans, d'autres à 35. Votre moment viendra.
+- **Restez prêt** : Travaillez votre craft chaque jour, même sans reconnaissance immédiate.
+- **Faites confiance au processus** : Les "échecs" sont souvent des redirections nécessaires.
+
+Quand j'ai sorti mon album *Illusion*, je pensais que c'était le bon moment. En regardant en arrière, c'était en effet le moment parfait — parce que j'avais accumulé assez d'expérience, de relations et de maturité pour le porter.
+
+## 6. Collaboration, Pas Compétition
+
+Le hip-hop a toujours été collaboratif. Travaillez avec d'autres artistes, producteurs, créatifs.
+
+- **Features** : Élargissez votre audience en collaborant
+- **Remixes** : Réinterprétez des tracks populaires (dans le cadre du droit d'auteur)
+- **Événements communautaires** : Organisez ou participez à des cyphers, des open mics
+
+En 2024, j'ai ouvert pour Demrick — une opportunité qui est venue d'une connexion authentique, pas d'une démarche agressive.
+
+## 7. Marketing Digital : Soyez Prévoyants
+
+Votre musique est un produit. Vous devez la commercialiser.
+
+**Actions concrètes :**
+- **Capturez des emails** : Offrez un téléchargement gratuit (instrumental, wallpaper, guide) en échange d'un email.
+- **Réseauter avec les blogueurs** : Proposez des articles invités sur des blogs hip-hop.
+- **SEO local et international** : Si vous visez la France, l'Afrique, le Brésil — créez du contenu dans ces langues ou adapté à ces cultures.
+- **YouTube optimisation** : Titres, descriptions, tags, thumbnails professionnels.
+
+Bientôt, je lancerai une série d'articles en français pour connecter directement avec la scène hip-hop francophone.
+
+## 8. Soyez Constant — La Régularité Bat l'Inspiration
+
+Les plus grands artistes ne comptent pas sur l'inspiration — ils cultivent la discipline.
+
+- **Écrivez chaque jour**, même si ce n'est pas parfait.
+- **Publiez régulièrement** (musique, vidéos, posts).
+- **Interagissez quotidiennement** avec votre communauté.
+
+Instagram m'a appris que l'algorithme récompense la constance. Plus vous êtes actif, plus vous êtes visible.
+
+## 9. Gérez Votre Entreprise (Parce Que C'est une Entreprise)
+
+Vous êtes un artiste, mais vous êtes aussi un entrepreneur.
+
+- **Suivez vos revenus et dépenses** — impôts, droits d'auteur
+- **Protégez votre propriété intellectuelle** — enregistrez vos œuvres
+- **Investissez dans votre croissance** — studio, équipe, marketing
+
+Mon site bakesmusic.com est à la fois ma vitrine et ma plateforme business. Il me permet de vendre de la musique, du merch, et de construire une liste email.
+
+## 10. Ne Lâchez Rien — Votre Empire Se Construit Brique par Brique
+
+Le chemin d'un artiste hip-hop est rarement linéaire. Il y aura des nuits blanches, des rejets, des doutes. Mais ceux qui réussissent sont ceux qui persistent.
+
+**Rappelez-vous :**
+- **Votre voix est unique** — personne ne peut la reproduire
+- **Votre histoire vaut la peine d'être racontée**
+- **Votre timing divin arrive**
+
+Construisez votre empire chaque jour. Un post à la fois. Une chanson à la fois. Une connexion à la fois.
+
+## 🎵 Écoutez Ma Musique
+
+Découvrez mon dernier album *Illusion* et suivez mon parcours :
+- **Site officiel** : https://bakesmusic.com
+- **Streaming** : Spotify, Apple Music, YouTube Music
+- **Merch Divine Timing** : hoodies, t-shirts, long sleeves
+
+## 💌 Restez Connecté
+
+Inscrivez-vous à ma newsletter pour recevoir :
+- Nouveaux articles sur la carrière hip-hop
+- Musique exclusive en avant-première
+- Offres spéciales merch
+
+*(Formulaire d'email capture à venir — revenez bientôt !)*
+
+**À propos de l'auteur** : Bakes est un artiste hip-hop lyrique basé à San Diego. Ses thèmes portent sur la croissance personnelle, le timing divin, et la construction de son propre monde. Il a ouvert pour Demrick en 2024 et sorti l'album *Illusion*. Site : bakesmusic.com | Telegram : @bakesmusic_bot
+
+*Cet article fait partie d'une série sur la construction d'une carrière hip-hop durable. Prochain article : "Comment Optimiser Votre Profil YouTube pour les Recherches Internationales".`,
+    image: "/images/blog/hip-hop-career-french.jpg",
+  },
+];
+  {
     title: "How to Get Your Music on Spotify Playlists in 2026",
     slug: "spotify-playlists-2026",
     date: "2026-03-26",
@@ -514,6 +697,128 @@ The question isn't whether the opportunity exists. It does. The question is whet
 
 That's when it starts to become real.`,
     image: "/images/blog/independent-artist-2026.jpg",
+  },
+  {
+    title: "How to Build Your Own World as an Artist (And Why Nobody Else Will Do It for You)",
+    slug: "build-your-own-world-artist",
+    date: "2026-03-28",
+    excerpt:
+      "The industry isn't going to come find you. Bakes breaks down why building your own world as an artist isn't optional — it's the only way. From San Diego to the global stage, here's the blueprint.",
+    category: "Personal Growth",
+    content: `Here's something nobody tells you when you first start making music: the industry isn't going to come find you.
+
+No label is searching for you. No playlist curator is refreshing your SoundCloud. No manager is scouting your city looking for the next one. That's the fantasy version. The real version? You build your own world — or you wait forever for someone else to build it for you.
+
+I chose to build.
+
+## What "Building Your Own World" Actually Means
+
+It's not just about making songs. That's step one. Building your own world means:
+
+**Owning the narrative.** You decide what your brand means. For me, it's divine timing, personal growth, and real talk. Not because a marketing team told me — because that's who I am.
+
+**Owning the infrastructure.** Your website, your email list, your merch. Not renting space on someone else's platform and hoping the algorithm blesses you.
+
+**Owning the vision.** When I launched the Divine Timing collection, it wasn't "merch." It was a capsule tied to the album's energy — streetwear that means something.
+
+## The Trap of Waiting for Permission
+
+Most artists I meet are waiting. Waiting for the co-sign. Waiting for the feature. Waiting for the playlist placement that changes everything.
+
+Here's what I learned the hard way: waiting IS the trap.
+
+Divine timing isn't passive — it's about doing the work while trusting the timing. There's a difference between waiting and building while waiting. I wrote about this in "Why Divine Timing Is the Most Underrated Lesson in a Music Career" — check that out if you haven't.
+
+## The Blueprint I'm Following
+
+**1. Create content that outlives the moment.**
+Blog posts, videos, music — stuff people find six months from now. That's why I write here. This blog isn't a diary. It's a search engine magnet.
+
+**2. Build direct connections.**
+Join the Movement — my email list. Not followers. Not likes. Direct access to the people who actually care.
+
+**3. Drop with intention.**
+Every release, every merch drop, every piece of content ties back to the bigger story. Nothing is random.
+
+**4. Think global.**
+San Diego is home. But the internet is everywhere. I'm writing content in multiple languages, optimizing for international search, and thinking beyond borders from day one.
+
+## The Hard Truth
+
+Building your own world is slower than getting discovered. It's less glamorous than going viral. And it's way more work than most people want to put in.
+
+But here's the thing — it's yours. Nobody can take it away. No algorithm shift, no label restructuring, no trend cycle can undo what you built with your own hands.
+
+That's the power.
+
+## Start Today
+
+If you're an artist reading this and you don't have a website you own, an email list, a content strategy, and a brand beyond "I make music" — then you're building on rented land. Fix that first. Everything else follows.`,
+    image: "/images/blog/build-your-own-world-artist.jpg",
+  },
+  {
+    title: "Why Owning Your Masters Matters More Than Ever in 2026",
+    slug: "owning-your-masters-2026",
+    date: "2026-03-28",
+    excerpt:
+      "The Supreme Court just ruled ISPs aren't liable for piracy. AI deepfakes are flooding streaming. In 2026, owning your masters isn't just smart — it's survival. Here's why every independent artist needs to control their catalog.",
+    category: "Music Career",
+    content: `The Supreme Court just ruled that ISPs aren't liable when users pirate music. The major labels are fighting 135,000 deepfakes across streaming platforms. AI-generated songs are flooding catalogs faster than humans can listen.
+
+And through all of it, one thing hasn't changed: if you own your masters, you own your future.
+
+## What "Owning Your Masters" Actually Means
+
+Quick version: your "masters" are the original recordings of your songs. Whoever owns them controls how they're used — streaming, licensing, sync placements, samples, everything.
+
+When you sign a traditional deal, the label typically owns your masters. You get an advance. They get your music. Forever.
+
+When you stay independent and own your masters, you keep every dollar that music generates. And in 2026, with AI, streaming, and global distribution changing the rules daily — that control is worth more than any advance check.
+
+## The 2026 Landscape
+
+Streaming hit $31.7 billion globally in 2025. Eleventh straight year of growth. That money flows to whoever owns the recordings. If that's a label, they eat. If that's you, you eat.
+
+AI is creating music. Apple Music is now labeling AI-generated tracks. Major labels are fighting deepfakes. If you don't own and control your catalog, someone else might be making decisions about your voice — literally.
+
+Sync licensing is booming. TV, film, ads, video games — they all need music. Independent artists with clean ownership can move fast. Label artists need permission from three different departments.
+
+## How I Handle It
+
+Every track I've released — Complicated, For a Long Time, the entire Illusion album — I own 100%.
+
+That means streaming royalties come to me. If a brand wants to use my music, I say yes or no. If I want to re-release, remix, or repackage — it's my call. Nobody can pull my music off platforms.
+
+## But What About the Money?
+
+"Labels give you an advance." True. They also recoup that advance from YOUR royalties before you see another dollar. Most artists never earn out.
+
+In 2026, you can distribute globally through DistroKid, TuneCore, or Amuse for under $50/year. Build your own website with built-in e-commerce. Sell merch directly to fans — zero commission. Run your own marketing through social and email.
+
+The "advance" model only makes sense if you can't do any of that yourself. But you can. The tools exist. The playbook is public.
+
+## The Long Game
+
+Here's what nobody tells you about owning your masters: the value compounds.
+
+Year one, your catalog generates modest streaming income. Year five, it's a library. Year ten, it's a retirement fund. Year twenty, it's generational wealth — or a catalog sale worth millions.
+
+But only if you own it.
+
+Every track I make for the Divine Timing era and beyond is building that library. Not for a label's balance sheet. For mine.
+
+## What You Should Do
+
+If you're an independent artist:
+
+1. Never sign away your masters without understanding exactly what you're giving up
+2. Register your music with a PRO (ASCAP, BMI, SESAC) for publishing royalties
+3. Keep clean records of who produced what, who wrote what, splits agreed on
+4. Distribute yourself — the platforms make it easy
+5. Build direct revenue — merch, downloads, your own store
+
+The game is changing fast. But ownership never goes out of style.`,
+    image: "/images/blog/owning-your-masters-2026.jpg",
   },
 ];
 
